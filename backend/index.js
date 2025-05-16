@@ -5,14 +5,13 @@ const mongoose=require("mongoose")
 const add=express()
 add.use(cors())
 add.use(express.json())
-const PORT = process.env.PORT || 2000;
-add.listen(PORT, function() {
-    console.log("The Server was started on port", PORT);
-});
+add.listen("2000",function(){
+    console.log("the server was start sucessfully....")
+})
 mongoose.connect("mongodb+srv://vasagiri2:vadivarasan@cluster0.hlc1izq.mongodb.net/mail?retryWrites=true&w=majority&appName=Cluster0").then(function(){console.log("The Server has been started...")}).catch(function(){console.log("The Server was failed to start...")})
 
 const roll=mongoose.model("title",{},"shell")
-add.post("/",function(req,res){
+add.post("/email",function(req,res){
     const value=req.body.msg
     const total=req.body.total
     console.log(total)
