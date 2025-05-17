@@ -15,6 +15,7 @@ function Add()
    setone("")
    settwo(true)
    axios.post("http://localhost:2000/email", { msg:one,total:value }).then(function(iteam){
+    console.log("yes")
     if(iteam.data==true)
     {
      alert("This message was send sucessfully...")
