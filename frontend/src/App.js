@@ -14,7 +14,7 @@ function Add()
   {
    setone("")
    settwo(true)
-   axios.post("http://localhost:2000/email", { msg:one,total:value }).then(function(iteam){
+   axios.post("https://backend-wine-pi.vercel.app/email", { msg:one,total:value }).then(function(iteam){
     console.log("yes")
     if(iteam.data==true)
     {
