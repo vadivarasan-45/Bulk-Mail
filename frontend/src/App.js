@@ -14,7 +14,7 @@ function Add()
   {
    setone("")
    settwo(true)
-   axios.post("https://backend-wine-pi.vercel.app/email", { msg:one,total:value }).then(function(iteam){
+   axios.post("https://bulk-mail-backend-nine.vercel.app/email", { msg:one,total:value }).then(function(iteam){
     console.log("yes")
     if(iteam.data==true)
     {
